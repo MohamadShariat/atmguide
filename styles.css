@@ -117,6 +117,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .footer {
@@ -132,4 +133,13 @@ p {
     var(--tertiary-color),
     var(--primary-color)
   );
+}
+
+.social {
+  display: flex;
+}
+
+.social .fab {
+  margin: 10px 15px;
+  color: var(--forth-color);
 }
