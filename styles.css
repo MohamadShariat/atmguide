@@ -159,7 +159,35 @@ a {
 }
 
 .sensor-image-container > img {
-  width: 100%;
-  padding: 0 20px;
-  border-radius: 10%;
+  width: 80%;
+  border-radius: 20px;
+  background-color: var(--forth-color);
+}
+
+.errors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.errors > select {
+  width: 80%;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: var(--forth-color);
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.errors > p {
+  width: 80%;
+  height: 100px;
+  background-color: var(--forth-color);
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
