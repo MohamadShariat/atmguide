@@ -9,6 +9,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
     <title>Stacker XE</title>
 </head>
 
@@ -19,9 +20,20 @@
     </section>
 
     <!-- Main -->
+
+    <section class="errors">
+        <select name="stacker" id="stacker">
+            <option value="" disabled selected>Please select an error...</option>
+            <option id="stacker-error" value=""></option>
+        </select>
+        <p id="stacker-error-des"></p>
+    </section>
+
     <section class="sensor-image-container">
         <img src="../assets/img/stacker_sensors.jpg" alt="Stacker Sensors">
     </section>
+
+
 
     <!-- Footer -->
     <footer class="footer">
