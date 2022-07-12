@@ -41,7 +41,8 @@ h3 {
   text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 }
 
-p {
+p,
+label {
   font-size: 1rem;
   text-align: center;
   color: var(--forth-color);
@@ -151,19 +152,6 @@ a {
 
 /* Stacker Xe */
 
-.sensor-image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5%;
-}
-
-.sensor-image-container > img {
-  width: 80%;
-  border-radius: 20px;
-  background-color: var(--forth-color);
-}
-
 .errors {
   display: flex;
   align-items: center;
@@ -201,10 +189,34 @@ a {
   align-items: center;
 }
 
+.sensor-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5%;
+}
+
+.sensor-image-container > img {
+  width: 80%;
+  border-radius: 20px;
+  background-color: var(--forth-color);
+}
+
+.on-off {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px;
+}
+
+.on-off:first-of-type label {
+  margin-right: 40px;
+}
+
+@media (max-width: 1150px) {
+}
 @media (max-width: 980px) {
-  .errors {
-    height: 100vp;
-  }
 }
 @media (max-width: 768px) {
 }
