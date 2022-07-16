@@ -9,6 +9,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles.css">
+    <script src="../js/receiptPrinterNP07.js" defer></script>
     <title>Receipt Printer NP07</title>
 </head>
 
@@ -22,23 +23,21 @@
 
     <section class="printer-main">
         <div class="on-off">
-              <input type="radio" id="on" name="red led" value="The red LED ON" checked>
+              <input type="radio" id="on" name="red led" value="The red LED ON">
               <label for="on">The red LED ON</label>
               <input type="radio" id="off" name="red led" value="The red LED OFF">
               <label for="off">The red LED OFF</label>
         </div>
         <section class="errors">
-            <select name="stacker" id="stacker">
+            <select name="receiptPrinterNP07" id="receiptPrinterTP07">
                 <option disabled selected>Please select...</option>
             </select>
-            <p id="stacker-error-des"></p>
+            <p id="receiptPrinterNP07-error-des"></p>
         </section>
     </section>
-
-    <section class="sensor-image-container">
-        <img src="../assets/img/np07_sensors.jpg" alt="Receipt Printer NP07 Sensors">
+    <section class=" sensor-image-container">
+        <img src="../assets/img/tp07_sensors.jpg" alt="Receipt Printer TP07 Sensors">
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <h3>Made by Mohammad Shariat</h3>
