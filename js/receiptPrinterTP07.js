@@ -6,13 +6,6 @@ const receiptPrinterTP07ErrorDes = document.querySelector(
   '#receiptPrinterTP07-error-des'
 );
 
-ledOn.addEventListener('change', function (e) {
-  console.log(e.target.checked);
-});
-ledOff.addEventListener('change', function (e) {
-  console.log(e.target.checked);
-});
-
 const receiptPrinterTP07ErrorArrON = [
   {
     1: 'The automatic cutter does not work because it does not leave the home position or does not reach the home position',
@@ -37,3 +30,17 @@ const receiptPrinterTP07ErrorArrON = [
       'StartOfJob timeout occurred because no EndOfJob was received within the specified time.',
   },
 ];
+
+const receiptPrinterTP07ErrorArrOFF = [
+  { 1: 'There is an abnormally of the print head temperature.' },
+  { 3: 'The power supply voltage is extremly high.' },
+  { 4: 'The power supply voltage is extremly low.' },
+  { 5: 'The loaded printer driver does not correspond with the firmware.' },
+];
+
+ledOn.addEventListener('change', function (e) {
+  console.log(e.target.checked);
+});
+ledOff.addEventListener('change', function (e) {
+  console.log(e.target.checked);
+});
