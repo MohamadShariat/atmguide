@@ -212,6 +212,13 @@ a {
 
 .on-off:first-of-type label {
   margin-right: 40px;
+  cursor: pointer;
+}
+
+.on-off:first-of-type input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 1150px) {

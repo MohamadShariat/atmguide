@@ -39,13 +39,20 @@ const receiptPrinterTP07ErrorArrOFF = [
 ];
 
 ledOn.addEventListener('change', function (e) {
-  e.target.checked &&
+  if (e.target.checked) {
     receiptPrinterTP07ErrorArrON.forEach(item => {
       const option = document.createElement('option');
       option.textContent = `${Object.keys(item)}`;
       receiptPrinterTP07.appendChild(option);
     });
+  }
 });
 ledOff.addEventListener('change', function (e) {
-  console.log(e.target.checked);
+  if (e.target.checked) {
+    receiptPrinterTP07ErrorArrOFF.forEach(item => {
+      const option = document.createElement('option');
+      option.textContent = `${Object.keys(item)}`;
+      receiptPrinterTP07.appendChild(option);
+    });
+  }
 });
