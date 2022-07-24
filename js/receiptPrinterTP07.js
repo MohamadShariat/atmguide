@@ -10,7 +10,6 @@ const receiptPrinterTP07ErrorArrON = [
   {
     1: 'The automatic cutter does not work because it does not leave the home position or does not reach the home position',
   },
-  { 2: "The carrier will not leave it's home position." },
   {
     3: 'A paper jam is detected between print starting position and TOF Sensors',
   },
@@ -39,7 +38,7 @@ const receiptPrinterTP07ErrorArrOFF = [
 ];
 
 ledOn.addEventListener('change', function (e) {
-  if (e.target.checked) {
+  if (ledOn.checked) {
     receiptPrinterTP07ErrorArrON.forEach(item => {
       const option = document.createElement('option');
       option.textContent = `${Object.keys(item)}`;
@@ -48,7 +47,7 @@ ledOn.addEventListener('change', function (e) {
   }
 });
 ledOff.addEventListener('change', function (e) {
-  if (e.target.checked) {
+  if (ledOff.checked) {
     receiptPrinterTP07ErrorArrOFF.forEach(item => {
       const option = document.createElement('option');
       option.textContent = `${Object.keys(item)}`;
