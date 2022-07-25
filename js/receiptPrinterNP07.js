@@ -1,12 +1,12 @@
 const ledOn = document.querySelector('#on');
 const ledOff = document.querySelector('#off');
 
-const receiptPrinterTP07 = document.querySelector('#receiptPrinterNP07');
-const receiptPrinterTP07ErrorDes = document.querySelector(
+const receiptPrinterNP07 = document.querySelector('#receiptPrinterNP07');
+const receiptPrinterNP07ErrorDes = document.querySelector(
   '#receiptPrinterNP07-error-des'
 );
 
-const receiptPrinterTP07ErrorArrON = [
+const receiptPrinterNP07ErrorArrON = [
   {
     1: 'The automatic cutter does not work because it does not leave the home position or does not reach the home position',
   },
@@ -31,9 +31,24 @@ const receiptPrinterTP07ErrorArrON = [
   },
 ];
 
+const receiptPrinterNP07ErrorArrOFF = [
+  { 1: 'There is an abnormally of the print head temperature.' },
+  { 3: 'The power supply voltage is extremly high.' },
+  { 4: 'The power supply voltage is extremly low.' },
+  { 5: 'The loaded printer driver does not correspond with the firmware.' },
+];
+
 ledOn.addEventListener('change', function (e) {
   console.log(e.target.checked);
 });
 ledOff.addEventListener('change', function (e) {
   console.log(e.target.checked);
 });
+
+// if (ledOn.checked) {
+//   console.log('LED ON Checked');
+// }
+
+// if (ledOff.checked) {
+//   console.log('LED OFF Checked');
+// }
