@@ -39,8 +39,15 @@ const receiptPrinterNP07ErrorArrOFF = [
 ];
 
 ledOn.addEventListener('change', function (e) {
-  console.log(e.target.checked);
+  if (ledOn.checked) {
+    receiptPrinterNP07ErrorArrON.forEach(item => {
+      const option = document.createElement('option');
+      option.textContent = `${Object.keys(item)}`;
+      receiptPrinterNP07.appendChild(option);
+    });
+  }
 });
+
 ledOff.addEventListener('change', function (e) {
   console.log(e.target.checked);
 });
