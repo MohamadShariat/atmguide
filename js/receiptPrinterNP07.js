@@ -49,7 +49,13 @@ ledOn.addEventListener('change', function (e) {
 });
 
 ledOff.addEventListener('change', function (e) {
-  console.log(e.target.checked);
+  if (ledOff.checked) {
+    receiptPrinterNP07ErrorArrOFF.forEach(item => {
+      const option = document.createElement('option');
+      option.textContent = `${Object.keys(item)}`;
+      receiptPrinterNP07.appendChild(option);
+    });
+  }
 });
 
 // if (ledOn.checked) {
