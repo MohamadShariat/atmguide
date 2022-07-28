@@ -44,6 +44,52 @@ ledOn.addEventListener('change', function (e) {
       option.textContent = `${Object.keys(item)}`;
       receiptPrinterTP07.appendChild(option);
     });
+
+    receiptPrinterTP07.addEventListener('change', e => {
+      e.preventDefault();
+      switch (e.target.value) {
+        case '1':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[0]
+          );
+          break;
+        case '3':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[1]
+          );
+          break;
+        case '4':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[2]
+          );
+          break;
+        case '5':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[3]
+          );
+          break;
+        case '6':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[4]
+          );
+          break;
+        case '7':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[5]
+          );
+          break;
+        case '8':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[6]
+          );
+          break;
+        case '...':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[7]
+          );
+          break;
+      }
+    });
   }
 });
 ledOff.addEventListener('change', function (e) {
