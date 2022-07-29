@@ -47,6 +47,7 @@ ledOn.addEventListener('change', function (e) {
 
     receiptPrinterTP07.addEventListener('change', e => {
       e.preventDefault();
+
       switch (e.target.value) {
         case '1':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
@@ -98,6 +99,32 @@ ledOff.addEventListener('change', function (e) {
       const option = document.createElement('option');
       option.textContent = `${Object.keys(item)}`;
       receiptPrinterTP07.appendChild(option);
+    });
+
+    receiptPrinterTP07.addEventListener('change', e => {
+      e.preventDefault();
+      switch (e.target.value) {
+        case '1':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrOFF[0]
+          );
+          break;
+        case '3':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrOFF[1]
+          );
+          break;
+        case '4':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrOFF[2]
+          );
+          break;
+        case '5':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrOFF[3]
+          );
+          break;
+      }
     });
   }
 });
