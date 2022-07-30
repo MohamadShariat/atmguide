@@ -45,6 +45,57 @@ ledOn.addEventListener('change', function (e) {
       option.textContent = `${Object.keys(item)}`;
       receiptPrinterNP07.appendChild(option);
     });
+    receiptPrinterNP07.addEventListener('change', e => {
+      e.preventDefault();
+
+      switch (e.target.value) {
+        case '1':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[0]
+          );
+          break;
+        case '2':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[1]
+          );
+          break;
+        case '3':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[2]
+          );
+          break;
+        case '4':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[3]
+          );
+          break;
+        case '5':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[4]
+          );
+          break;
+        case '6':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[5]
+          );
+          break;
+        case '7':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[6]
+          );
+          break;
+        case '8':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[7]
+          );
+          break;
+        case '...':
+          receiptPrinterNP07ErrorDes.textContent = Object.values(
+            receiptPrinterNP07ErrorArrON[8]
+          );
+          break;
+      }
+    });
   }
 });
 
@@ -57,11 +108,3 @@ ledOff.addEventListener('change', function (e) {
     });
   }
 });
-
-// if (ledOn.checked) {
-//   console.log('LED ON Checked');
-// }
-
-// if (ledOff.checked) {
-//   console.log('LED OFF Checked');
-// }
