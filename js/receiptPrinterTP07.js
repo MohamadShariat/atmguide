@@ -38,6 +38,8 @@ const receiptPrinterTP07ErrorArrOFF = [
 ];
 
 ledOn.addEventListener('change', function (e) {
+  receiptPrinterTP07.textContent = '';
+
   if (ledOn.checked) {
     receiptPrinterTP07ErrorArrON.forEach(item => {
       const option = document.createElement('option');
@@ -94,6 +96,8 @@ ledOn.addEventListener('change', function (e) {
   }
 });
 ledOff.addEventListener('change', function (e) {
+  receiptPrinterTP07.textContent = '';
+
   if (ledOff.checked) {
     receiptPrinterTP07ErrorArrOFF.forEach(item => {
       const option = document.createElement('option');
