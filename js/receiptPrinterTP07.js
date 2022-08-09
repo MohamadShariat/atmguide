@@ -8,6 +8,9 @@ const receiptPrinterTP07ErrorDes = document.querySelector(
 
 const receiptPrinterTP07ErrorArrON = [
   {
+    'Please select...': '',
+  },
+  {
     1: 'The automatic cutter does not work because it does not leave the home position or does not reach the home position',
   },
   {
@@ -31,14 +34,16 @@ const receiptPrinterTP07ErrorArrON = [
 ];
 
 const receiptPrinterTP07ErrorArrOFF = [
+  { 'Please select...': '' },
   { 1: 'There is an abnormally of the print head temperature.' },
-  { 3: 'The power supply voltage is extremly high.' },
-  { 4: 'The power supply voltage is extremly low.' },
+  { 3: 'The power supply voltage is extremely high.' },
+  { 4: 'The power supply voltage is extremely low.' },
   { 5: 'The loaded printer driver does not correspond with the firmware.' },
 ];
 
 ledOn.addEventListener('change', function (e) {
   receiptPrinterTP07.textContent = '';
+  receiptPrinterTP07ErrorDes.textContent = '';
 
   if (ledOn.checked) {
     receiptPrinterTP07ErrorArrON.forEach(item => {
@@ -51,44 +56,49 @@ ledOn.addEventListener('change', function (e) {
       e.preventDefault();
 
       switch (e.target.value) {
-        case '1':
+        case 'Please select...':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrON[0]
           );
           break;
-        case '3':
+        case '1':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrON[1]
           );
           break;
-        case '4':
+        case '3':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrON[2]
           );
           break;
-        case '5':
+        case '4':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrON[3]
           );
           break;
-        case '6':
+        case '5':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrON[4]
           );
           break;
-        case '7':
+        case '6':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrON[5]
           );
           break;
-        case '8':
+        case '7':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrON[6]
           );
           break;
-        case '...':
+        case '8':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrON[7]
+          );
+          break;
+        case '...':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrON[8]
           );
           break;
       }
@@ -97,6 +107,7 @@ ledOn.addEventListener('change', function (e) {
 });
 ledOff.addEventListener('change', function (e) {
   receiptPrinterTP07.textContent = '';
+  receiptPrinterTP07ErrorDes.textContent = '';
 
   if (ledOff.checked) {
     receiptPrinterTP07ErrorArrOFF.forEach(item => {
@@ -108,24 +119,29 @@ ledOff.addEventListener('change', function (e) {
     receiptPrinterTP07.addEventListener('change', e => {
       e.preventDefault();
       switch (e.target.value) {
-        case '1':
+        case 'Please select...':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrOFF[0]
           );
           break;
-        case '3':
+        case '1':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrOFF[1]
           );
           break;
-        case '4':
+        case '3':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrOFF[2]
           );
           break;
-        case '5':
+        case '4':
           receiptPrinterTP07ErrorDes.textContent = Object.values(
             receiptPrinterTP07ErrorArrOFF[3]
+          );
+          break;
+        case '5':
+          receiptPrinterTP07ErrorDes.textContent = Object.values(
+            receiptPrinterTP07ErrorArrOFF[4]
           );
           break;
       }
