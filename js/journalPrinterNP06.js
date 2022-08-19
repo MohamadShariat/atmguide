@@ -6,6 +6,10 @@ const journalPrinterNP06ErrorDes = document.querySelector(
   '#journalPrinterNP06-error-des'
 );
 
+// Get the current year for footer
+const year = document.querySelector('#currentYear');
+year.innerHTML = new Date().getFullYear();
+
 const journalPrinterNP06ErrorArrON = [
   { 'Please select...': '' },
   { 2: "The carrier will not leave or reach it's home position." },
