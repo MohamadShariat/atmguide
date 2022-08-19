@@ -6,6 +6,10 @@ const receiptPrinterNP07ErrorDes = document.querySelector(
   '#receiptPrinterNP07-error-des'
 );
 
+// Get the current year for footer
+const year = document.querySelector('#currentYear');
+year.innerHTML = new Date().getFullYear();
+
 const receiptPrinterNP07ErrorArrON = [
   {
     'Please select...': '',

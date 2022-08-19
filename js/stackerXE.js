@@ -1,6 +1,10 @@
 const stacker = document.querySelector('#stacker');
 const stackerErrorDes = document.querySelector('#stacker-error-des');
 
+// Get the current year for footer
+const year = document.querySelector('#currentYear');
+year.innerHTML = new Date().getFullYear();
+
 const stackerErrorArr = [
   { '-/-': `Start-up (after RESET or electronics self-test)` },
   { 'b/u': `Burn; program controller` },

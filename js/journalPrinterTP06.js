@@ -6,6 +6,10 @@ const journalPrinterTP06ErrorDes = document.querySelector(
   '#journalPrinterTP06-error-des'
 );
 
+// Get the current year for footer
+const year = document.querySelector('#currentYear');
+year.innerHTML = new Date().getFullYear();
+
 const journalPrinterTP06ErrorArrON = [
   { 'Please select...': '' },
   {
